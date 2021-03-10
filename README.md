@@ -2,6 +2,8 @@
 
 This mini-site was built to showcase how developers can get started with Skynet for the 2021 ENCODE: Hack the System hackathon.
 
+![Skynet x ENCODE Screenshot](https://siasky.net/BAAcajBPdTvC8rJ1W3S729ea5eq7YrgKwvZExTjb_V3tqg)
+
 It is a bit messy, using both antd and semantic-ui, but the source may be useful for others building follow-along workshops or exploring using skynet-js with React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
