@@ -68,20 +68,19 @@ function App() {
           <Embed
             placeholder="https://siasky.net/MAAmPGtMDwf8LVPsD28guYegd04ahPviQyU2rAdwdFxQ2Q"
             hd={true}
+            id="3VlQQDPkTPk"
             iframe={{
-              src:
-                'https://www.youtube-nocookie.com/embed/rcAxLswES9g?start=2205',
-              allowfullscreen: true,
+              allowFullScreen: true,
             }}
             source="youtube"
-            brandedUI={false}
           />
           {/* <Embed
-          id="rcAxLswES9g"
-          placeholder="https://siasky.net/MAAmPGtMDwf8LVPsD28guYegd04ahPviQyU2rAdwdFxQ2Q"
-          source="youtube"
-          brandedUI={false}
-        /> */}
+            id="3VlQQDPkTPk"
+            hd={true}
+            placeholder="https://siasky.net/MAAmPGtMDwf8LVPsD28guYegd04ahPviQyU2rAdwdFxQ2Q"
+            source="youtube"
+            brandedUI={false}
+          /> */}
         </Container>
       </Transition>
       <Container>
