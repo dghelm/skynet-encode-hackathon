@@ -26,22 +26,26 @@ const Challenges = () => {
       />
 
       <Container>
-        <Grid relaxed columns={2}>
-          <Grid.Column>
-            <Header
-              as="h3"
-              content="Easy"
-              style={style.h3}
-              textAlign="center"
-            />
-            <Card
-              fluid
-              header="Host Your App on Skynet"
-              meta="Prizes: 100k Siacoin pool"
-              description="Use Skynet in your project. You can store your application or user data on Skynet, or just upload your web application’s front-end to Skynet."
-            />
-          </Grid.Column>
-          <Grid.Column>
+        <Grid relaxed>
+          <Grid.Row>
+            <Grid.Column width={3}></Grid.Column>
+            <Grid.Column width={10}>
+              <Header
+                as="h3"
+                content="Best Skynet Integration"
+                style={style.h3}
+                textAlign="center"
+              />
+              <Card
+                fluid
+                header="Use Skynet in your project or build a Skynet App"
+                meta="Prizes: 30k SC (~$850) + 3k for participation"
+                description="Ideas for usage: Store your application or user data on Skynet. Upload your web application’s front-end to Skynet. Build a decentralized app on Skynet using decentralized login, an HNS domain name, or SkyDB for storing mutable application data."
+              />
+            </Grid.Column>
+            <Grid.Column width={3}></Grid.Column>
+          </Grid.Row>
+          {/* <Grid.Column>
             <Header
               as="h3"
               content="Medium"
@@ -54,7 +58,7 @@ const Challenges = () => {
               meta="Prizes: 1 Winner x 200k Siacoins, 2 Runner-ups x 75k Siacoins"
               description="Build a Skapp (Skynet web application that doesn’t rely on centralized services) which utilizes decentralized login, an HNS domain name, and SkyDB for storing mutable application data. User-focused ideas and interoperability with other skapps in the ecosystem is a plus."
             />
-          </Grid.Column>
+          </Grid.Column> */}
         </Grid>
       </Container>
     </>

@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { SkynetClient } from "skynet-js";
+import { useState } from 'react';
+import { SkynetClient } from 'skynet-js';
 
-const client = new SkynetClient("https://siasky.net");
+const client = new SkynetClient('https://siasky.net/');
 
 const useSkynetUpload = () => {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState('');
   const [progress, setProgress] = useState(-1);
-  const [skylink, setSkylink] = useState("");
+  const [skylink, setSkylink] = useState('');
 
   const onUploadProgress = (progress, { loaded, total }) => {
     return setProgress(Math.round(progress * 100));
@@ -14,7 +14,7 @@ const useSkynetUpload = () => {
 
   const uploadFile = async (file) => {
     try {
-      setStatus("uploading");
+      setStatus('uploading');
       setProgress(0);
 
       const response = await client.uploadFile(file, { onUploadProgress });
@@ -22,10 +22,10 @@ const useSkynetUpload = () => {
       const portalUrl = client.getSkylinkUrl(response.skylink);
 
       setSkylink(portalUrl);
-      setStatus("completed");
+      setStatus('completed');
       setProgress(100);
     } catch (error) {
-      setStatus("error");
+      setStatus('error');
     }
   };
 

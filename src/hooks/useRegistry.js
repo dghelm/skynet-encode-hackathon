@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SkynetClient, parseSkylink } from 'skynet-js';
 
-const client = new SkynetClient('https://siasky.net');
+const client = new SkynetClient();
 
 export const useRegistryWrite = () => {
   const [status, setStatus] = useState('');

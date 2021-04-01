@@ -5,8 +5,8 @@ import 'react-json-pretty/themes/monikai.css';
 
 import { SkynetClient } from 'skynet-js';
 
-const client = new SkynetClient('https://siasky.net');
-// const client = new SkynetClient();
+// const client = new SkynetClient('https://siasky.net');
+const client = new SkynetClient();
 
 const FilePreviewer = ({ skylink }) => {
   const [metadata, setMetadata] = useState({});

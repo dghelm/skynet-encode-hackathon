@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { SkynetClient } from 'skynet-js';
 import { getMetadata } from 'skynet-js/dist/download';
 
-const client = new SkynetClient('https://siasky.net');
+const client = new SkynetClient();
 
 const useSkyfileMetadata = () => {
   const [status, setStatus] = useState('');

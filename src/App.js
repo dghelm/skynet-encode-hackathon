@@ -53,13 +53,13 @@ function App() {
     <div className="App">
       <Header
         as="h1"
-        content="Skynet x ENCODE Hackathon"
+        content="Skynet x MIT Bitcoin Expo Hackathon"
         style={style.h1}
         textAlign="center"
       />
       <Header
         as="h2"
-        content="Introduction Workshop | March 10th, 2021"
+        content="Introduction Workshop | April 2nd, 2021"
         style={style.h2}
         textAlign="center"
       />
@@ -97,7 +97,7 @@ function App() {
           />
         </a>
         <a
-          href="https://github.com/NebulousLabs/skynet-workshop"
+          href="https://github.com/SkynetHQ/skynet-workshop"
           target="_blank"
           rel="noreferrer"
         >

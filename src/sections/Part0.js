@@ -74,7 +74,7 @@ const Part0 = ({ codeColor }) => {
               <Segment>
                 <SyntaxHighlighter language="console" style={codeColor}>
                   {
-                    'git clone "https://github.com/NebulousLabs/skynet-workshop.git" \ncd skynet-workshop'
+                    'git clone "https://github.com/SkynetHQ/skynet-workshop.git" \ncd skynet-workshop'
                   }
                 </SyntaxHighlighter>
               </Segment>
