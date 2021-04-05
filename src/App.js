@@ -45,7 +45,7 @@ const style = {
 };
 
 function App() {
-  const [hideVideo, setHideVideo] = useState(false);
+  const [hideVideo, setHideVideo] = useState(true);
   const [hideWalkthrough, setHideWalkthrough] = useState(false);
   const [hideInteractive, setHideInteractive] = useState(false);
 
@@ -59,7 +59,7 @@ function App() {
       />
       <Header
         as="h2"
-        content="Introduction Workshop | April 2nd, 2021"
+        content="Introduction Workshop | April 5th, 2021"
         style={style.h2}
         textAlign="center"
       />
@@ -126,7 +126,7 @@ function App() {
           <Segment textAlign="center">
             <Radio
               toggle
-              label="Hide Workshop Video &amp; Challenges"
+              label="Hide Workshop Video"
               checked={hideVideo}
               onClick={() => setHideVideo(!hideVideo)}
             />
@@ -150,11 +150,6 @@ function App() {
         </Segment.Group>
       </Container>
 
-      <Transition visible={!hideVideo}>
-        <Container>
-          <Challenges />
-        </Container>
-      </Transition>
       <Transition visible={!hideWalkthrough}>
         <Container>
           <Part0 codeColor={monokaiSublime} />
