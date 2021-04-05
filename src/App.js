@@ -53,7 +53,7 @@ function App() {
     <div className="App">
       <Header
         as="h1"
-        content="Skynet x MIT Bitcoin Expo Hackathon"
+        content="Skynet x Girl Develop It Workshop"
         style={style.h1}
         textAlign="center"
       />
