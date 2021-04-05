@@ -120,6 +120,18 @@ function App() {
             textAlign="center"
           />
         </a>
+        <a
+          href="https://gitcoin.co/hackathon/built-to-explore/onboard"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Header
+            as="h3"
+            content="Upcoming Hackathon (Non-devs Welcome!)"
+            style={style.h3}
+            textAlign="center"
+          />
+        </a>
       </Container>
       <Container>
         <Segment.Group horizontal>
