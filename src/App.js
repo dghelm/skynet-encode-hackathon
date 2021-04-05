@@ -108,6 +108,18 @@ function App() {
             textAlign="center"
           />
         </a>
+        <a
+          href="https://codesandbox.io/s/skynet-workshop-u6wk4"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Header
+            as="h3"
+            content="Workshop on CodeSandbox.io"
+            style={style.h3}
+            textAlign="center"
+          />
+        </a>
       </Container>
       <Container>
         <Segment.Group horizontal>
