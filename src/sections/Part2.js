@@ -34,14 +34,14 @@ const { skylink: dirSkylink } = await client.uploadDirectory(
 );
 
 // generate a URL for our current portal
-const dirSkylinkUrl = client.getSkylinkUrl(dirSkylink);
+const dirSkylinkUrl = await client.getSkylinkUrl(dirSkylink);
 
 console.log('Web Page Uploaded:', dirSkylinkUrl);
 
 // To use this later in our React app, save the URL to the state.
 setWebPageSkylink(dirSkylinkUrl);`;
 
-const Part1 = ({ codeColor }) => {
+const Part2 = ({ codeColor }) => {
   return (
     <>
       <Header
@@ -91,6 +91,9 @@ const Part1 = ({ codeColor }) => {
                 <br />
                 <br />
                 Finally, we upload the directory to get its skylink and URL.
+                <br />
+                <br />
+                <em>Change in 4.0: getSkylinkUrl has become async/await.</em>
               </Segment>
             </Grid.Column>
           </Grid.Row>
@@ -116,4 +119,4 @@ const Part1 = ({ codeColor }) => {
   );
 };
 
-export default Part1;
+export default Part2;

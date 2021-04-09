@@ -32,7 +32,7 @@ const { skylink } = await client.uploadFile(file);
 
 // skylinks start with 'sia://' and don't specify a portal URL
 // we can generate URLs for our current portal though.
-const skylinkUrl = client.getSkylinkUrl(skylink);
+const skylinkUrl = await client.getSkylinkUrl(skylink);
 
 console.log('File Uploaded:', skylinkUrl);
 
@@ -74,12 +74,15 @@ const Part1 = ({ codeColor }) => {
             <Grid.Column>
               <Segment>
                 <SyntaxHighlighter language="console" style={codeColor}>
-                  {'yarn add skynet-js'}
+                  {'yarn add skynet-js@beta'}
                 </SyntaxHighlighter>
               </Segment>
             </Grid.Column>
             <Grid.Column>
-              <Segment>Installs Skynet's Javascript SDK.</Segment>
+              <Segment>
+                Installs Skynet's Javascript SDK. Only the latest beta supports
+                MySky and DACs.
+              </Segment>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -126,6 +129,9 @@ const Part1 = ({ codeColor }) => {
                 <br />
                 The we upload the image file from the form, and convert the
                 skylink to a URL accessible from the current portal.
+                <br />
+                <br />
+                <em>Change in 4.0: getSkylinkUrl has become async/await.</em>
               </Segment>
             </Grid.Column>
           </Grid.Row>

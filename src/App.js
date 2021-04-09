@@ -4,17 +4,18 @@ import Part1 from './sections/Part1';
 import Part2 from './sections/Part2';
 import Part3 from './sections/Part3';
 import Part4 from './sections/Part4';
+import Part5 from './sections/Part5';
 import DragUploader from './components/DragUploader';
 import PortalAlternatives from './components/PortalAlternatives';
 import FilePreview from './components/FilePreview';
-import SkyDB from './components/SkyDB';
+// import SkyDB from './components/SkyDB';
 import Base32Subdomain from './components/Base32Subdomain';
-import Registry from './components/Registry';
+// import Registry from './components/Registry';
 import HNSLookup from './components/HNSLookup';
 // import FilePreviewer from './components/FilePreviewer';
 import {
   Header,
-  Embed,
+  Image,
   Container,
   Segment,
   Radio,
@@ -45,25 +46,31 @@ const style = {
 };
 
 function App() {
-  const [hideVideo, setHideVideo] = useState(true);
   const [hideWalkthrough, setHideWalkthrough] = useState(false);
   const [hideInteractive, setHideInteractive] = useState(false);
 
   return (
     <div className="App">
+      <Container text>
+        <Image
+          style={style.h1}
+          src="https://siasky.net/MACXJADiJJteCBbXzZKXPZr6qB0CjG3o5SVp5NI36ft_ag"
+          fluid
+        />
+      </Container>
       <Header
         as="h1"
-        content="Skynet x Girl Develop It Workshop"
+        content="Built to Explore Hackathon Workshop"
         style={style.h1}
         textAlign="center"
       />
       <Header
         as="h2"
-        content="Introduction Workshop | April 5th, 2021"
+        content="Introduction Workshop | April 9th, 2021"
         style={style.h2}
         textAlign="center"
       />
-      <Transition animation="scale" visible={!hideVideo}>
+      {/* <Transition animation="scale" visible={!hideVideo}>
         <Container text>
           <Embed
             placeholder="https://siasky.net/MAAmPGtMDwf8LVPsD28guYegd04ahPviQyU2rAdwdFxQ2Q"
@@ -74,15 +81,8 @@ function App() {
             }}
             source="youtube"
           />
-          {/* <Embed
-            id="3VlQQDPkTPk"
-            hd={true}
-            placeholder="https://siasky.net/MAAmPGtMDwf8LVPsD28guYegd04ahPviQyU2rAdwdFxQ2Q"
-            source="youtube"
-            brandedUI={false}
-          /> */}
         </Container>
-      </Transition>
+      </Transition> */}
       <Container>
         <a
           href="https://skynetlabs.typeform.com/to/aVBLrQh3"
@@ -97,7 +97,7 @@ function App() {
           />
         </a>
         <a
-          href="https://github.com/SkynetHQ/skynet-workshop"
+          href="https://github.com/dghelm/skynet-workshop"
           target="_blank"
           rel="noreferrer"
         >
@@ -108,7 +108,7 @@ function App() {
             textAlign="center"
           />
         </a>
-        <a
+        {/* <a
           href="https://codesandbox.io/s/skynet-workshop-u6wk4"
           target="_blank"
           rel="noreferrer"
@@ -119,7 +119,7 @@ function App() {
             style={style.h3}
             textAlign="center"
           />
-        </a>
+        </a> */}
         <a
           href="https://gitcoin.co/hackathon/built-to-explore/onboard"
           target="_blank"
@@ -127,7 +127,7 @@ function App() {
         >
           <Header
             as="h3"
-            content="Upcoming Hackathon (Non-devs Welcome!)"
+            content="Gitcoin Hackathon Sign-up"
             style={style.h3}
             textAlign="center"
           />
@@ -135,12 +135,20 @@ function App() {
       </Container>
       <Container>
         <Segment.Group horizontal>
-          <Segment textAlign="center">
+          {/* <Segment textAlign="center">
             <Radio
               toggle
               label="Hide Workshop Video"
               checked={hideVideo}
               onClick={() => setHideVideo(!hideVideo)}
+            />
+          </Segment> */}
+          <Segment textAlign="center">
+            <Radio
+              toggle
+              label="Hide Workshop Walkthrough"
+              checked={hideWalkthrough}
+              onClick={() => setHideWalkthrough(!hideWalkthrough)}
             />
           </Segment>
           <Segment textAlign="center">
@@ -149,14 +157,6 @@ function App() {
               label="Hide Interactive Components"
               checked={hideInteractive}
               onClick={() => setHideInteractive(!hideInteractive)}
-            />
-          </Segment>
-          <Segment textAlign="center">
-            <Radio
-              toggle
-              label="Hide Workshop Walkthrough"
-              checked={hideWalkthrough}
-              onClick={() => setHideWalkthrough(!hideWalkthrough)}
             />
           </Segment>
         </Segment.Group>
@@ -220,9 +220,9 @@ function App() {
       <Transition visible={!hideInteractive}>
         <Container text>
           <Segment.Group>
-            <Segment>
+            {/* <Segment>
               <SkyDB />
-            </Segment>
+            </Segment> */}
           </Segment.Group>
         </Container>
       </Transition>
@@ -235,6 +235,14 @@ function App() {
 
       <br />
       <br />
+      <Transition visible={!hideWalkthrough}>
+        <Container>
+          <Part5 codeColor={monokaiSublime} />
+        </Container>
+      </Transition>
+
+      <br />
+      <br />
 
       <Transition visible={!hideInteractive}>
         <Container text>
@@ -242,9 +250,9 @@ function App() {
             <Segment>
               <HNSLookup />
             </Segment>
-            <Segment>
+            {/* <Segment>
               <Registry />
-            </Segment>
+            </Segment> */}
           </Segment.Group>
         </Container>
       </Transition>
